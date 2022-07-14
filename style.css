@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: 'Open Sans', sans-serif;
+}
+
+#page-container{
+    position: relative;
+    min-height: 290vh;
+}
+
+#content-wrap{
+    padding-bottom: 2.5rem;  /*
+    altura do rodapé*/
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+div img{
+    display: block;
+    width: 90%;
+    max-width: 600px;
+}
+
+.flex-container{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    min-width: 320px;
+    justify-items: center;
+    left: 50px;
+    right: 50px;
+}
+
+header{
+    background-color: #228B22;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+header .list-items{
+    display: flex;
+    max-width: 260px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-items li a{
+    color: #fff;
+}
+
+header .menu{
+    justify-content: space-between;
+}
+
+.apresentacao{
+    height: 55vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao .texto-apresentacao{
+    min-height: 100px;
+    width: 100%;
+}
+
+.texto-apresentacao h1{
+    color: #228B22;
+    font-size:  48px;
+    margin-bottom: 10px;
+}
+
+.texto-apresentacao a{
+    background-color: #228B22;
+    color: #fff;
+    text-align: center;
+    border-radius: 30px;
+    width: 200px;
+    display: block;
+    text-decoration: none;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#historia-cha{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#historia-cha h2{
+    height: 70px;
+    font-size: 32px;
+    color: #228B22;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#historia-cha h2:before{
+    content: "";
+    height: 50px;
+    width: 3px;
+    margin-right: 2px;
+    background-color: #228B22;
+    position: relative;
+}
+
+#historia-cha p{
+    margin-bottom: 10px;
+    width: 90%;
+    position: relative;
+    align-items: center;
+    min-width: 500px;
+}
+
+#historia-cha img{
+    min-width: 500px;
+}
+
+div.galeria{
+    width: 90%;
+    height: 80vh;
+    background-color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 45vh;
+    justify-content: space-evenly;
+}
+
+div.chas-galeria{
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+div.img{
+width: 100%;
+height: 100%;
+position: relative;
+    overflow: hidden;
+}
+
+div.img img{
+    position: absolute;
+    object-fit: cover;
+    width: 50%;
+    height: 100%;
+}
+
+div.overflow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(transparent, grey);
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+}
+
+div.conteudo{
+    margin-right: 3px;
+    position: absolute;
+    color: white;
+    border: 1px solid #fff;
+    padding: 0 0px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    transition: all 0.5s ease-in-out;
+}
+
+div.conteudo h1{
+    font-size: 16px;
+}
+
+div.conteudo p{
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+div.chas-galeria:hover div.overflow{
+    opacity: 1;
+}
+
+div.chas-galeria:hover div.conteudo{
+    bottom: 10px;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;  /*altura do rodapé*/
+    background-color: #228B22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h3{
+    color: #fff;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 764px) {
+    .wg1{
+        grid-column: span 2;
+    }
+    
+    .hg1{
+        grid-row: span 2;
+    }
+
+    div.galeria{
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: calc(45vh / 2);
+    }
+
+    div.conteudo h1{
+        font-size: 14px;
+    }
+}
